@@ -1,7 +1,4 @@
-import Link from 'next/link';
-
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
@@ -11,14 +8,8 @@ const Hero = () => (
   <Background color="bg-gray-100">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="/">Sign in</Link>
-        </li>
+        <div></div>
+        <div></div>
       </NavbarTwoColumns>
     </Section>
 
@@ -26,15 +17,23 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'Apps, websites, and more\n'}
+            <span className="text-primary-500">
+              Our software is out of this planet
+            </span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="If you are interested in working with us please provide your email"
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
-          </Link>
+          <div>
+            <input
+              type="text"
+              id="first_name"
+              className="w-[300px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              placeholder="Email..."
+              required
+            ></input>
+          </div>
         }
       />
     </Section>
